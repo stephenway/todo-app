@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  min-height: 200px;
+  background-image: var(--bg-mobile-image);
+  background-size: cover;
+  margin: 0;
+  color: #fff;
+  padding: 1em;
+}
+
+@media (min-width: 1440px) {
+  .header {
+    height: 400px;
+    background-image: var(--bg-desktop-image);
+  }
+}
+
+.headerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+
+.header h1,
+.header .themeIcon {
+  margin: 30px 0;
+  padding: 0;
+}
+
+.themeIcon {
+  position: relative;
+  top: 5px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12em auto 1em;
+  max-width: 600px;
+}

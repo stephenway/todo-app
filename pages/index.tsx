@@ -1,9 +1,10 @@
-import Link from "next/link";
 import Layout from "../containers/Layout";
 
 const IndexPage = () => (
   <Layout title="My Todos">
-    <p>Index Page</p>
+    {/* Create TODO */}
+    {/* List TODOs */}
+    <p>Drag and drop to reorder list</p>
   </Layout>
 );
 

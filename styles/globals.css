@@ -1,12 +1,65 @@
+:root {
+  --bright-blue: hsl(220, 98%, 61%);
+  --color-primary: var(--bright-blue);
+  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /*
+  media queries
+  mobile: 375px
+  desktop: 1440px
+  */
+}
+
+html {
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --light-grayish-blue-hover: hsl(233, 11%, 91%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  --bg-color: var(--very-light-gray);
+  --text-color-primary: var(--dark-grayish-blue);
+  --text-color-secondary: var(--color-prussianBlue);
+  --fill-primary: var(--color-primary);
+
+  --bg-mobile-image: url("/images/bg-mobile-light.jpg");
+  --bg-desktop-image: url("/images/bg-desktop-light.jpg");
+}
+
+.darkTheme {
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  /* TODO: Find out what this color is for */
+  --very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+
+  --bg-color: var(--very-dark-blue);
+
+  --bg-mobile-image: url("/images/bg-mobile-dark.jpg");
+  --bg-desktop-image: url("/images/bg-desktop-dark.jpg");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
 }
 
 body {
-  font-size: 18px;
+  color: var(--text-color-primary);
+  background-color: var(--bg-color);
+  transition: background 0.5s ease;
+  height: 100%;
 }
 
 a {

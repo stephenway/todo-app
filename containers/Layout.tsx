@@ -1,26 +1,31 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
+import styles from "../styles/Layout.module.css";
+import ThemeToggle from "../components/ThemeToggle";
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => {
+const Layout = ({ children, title = "Page" }: Props) => {
   return (
-    <div>
+    <>
       <Head>
         <title>{title} | TODO App</title>
         <meta
           name="description"
-          content={`Another todo tool created by Stephen Way, a Principal Frontend Engineer ready to work for you.`}
+          content="Another todo tool created by Stephen Way, a Principal Frontend Engineer ready to work for you."
         />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <h1>TODO</h1>
-      {children}
-    </div>
+      <header className={styles.header}>
+        <div className={styles.headerContent}>
+          <h1>TODO</h1>
+          <ThemeToggle className={styles.themeIcon} />
+        </div>
+      </header>
+      <main className={styles.main}>{children}</main>
+    </>
   );
 };
 
