@@ -1,0 +1,54 @@
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-card);
+  width: var(--form-width);
+  height: var(--form-height-mobile);
+  padding: var(--form-pad);
+}
+
+@media (min-width: 768px) {
+  .item {
+    height: var(--form-height);
+  }
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid var(--dark-grayish-blue-trans);
+}
+
+.checkbox {
+  transform: scale(0.85);
+}
+
+@media (min-width: 768px) {
+  .checkbox {
+    transform: scale(1);
+    position: relative;
+    top: 3px;
+  }
+}
+
+.textComplete {
+  color: var(--light-grayish-blue);
+  text-decoration: line-through;
+}
+
+.alignRight {
+  position: absolute;
+  right: 1.5em;
+}
+
+.removeButton {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.item:hover .removeButton {
+  opacity: 1;
+  pointer-events: initial;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.root {
+  font-size: 14px;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-card);
+  width: var(--form-width);
+  height: var(--form-height-mobile);
+  padding: 0 2em;
+}
+
+.root > * {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .item {
+    height: var(--form-height);
+  }
+}
+
+.filterGroup {
+  text-align: center;
+}
+
+.completedButton {
+  text-align: right;
+}
