@@ -12,6 +12,7 @@ const Layout = ({ children, title = "Page" }: Props) => {
   return (
     <>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>{title} | TODO App</title>
         <meta
           name="description"

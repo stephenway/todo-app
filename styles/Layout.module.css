@@ -1,17 +1,21 @@
 .header {
   width: 100%;
-  min-height: 200px;
+  min-height: 209px;
   background-image: var(--bg-mobile-image);
-  background-size: cover;
+  background-size: contain;
   margin: 0;
   color: #fff;
-  padding: 1em;
+  padding: 1.5em;
+  overflow: hidden;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .header {
-    height: 400px;
+    height: 320px;
     background-image: var(--bg-desktop-image);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 1em;
   }
 }
 
@@ -25,24 +29,61 @@
 }
 
 .header h1 {
-  font-weight: 400;
-  letter-spacing: 8px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 14px;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 38px;
+    letter-spacing: 23px;
+  }
 }
 
 .header h1,
 .header .themeIcon {
-  margin: 30px 0;
+  margin: 28px 0;
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  .header h1,
+  .header .themeIcon {
+    margin: 56px 0;
+  }
+}
+
 .themeIcon {
-  position: relative;
-  top: 5px;
+  fill: #fff;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: fill 0.25s ease;
+}
+
+.themeIcon:hover {
+  fill: rgb(255, 232, 170);
+}
+
+@media (min-width: 768px) {
+  .themeIcon {
+    position: relative;
+    top: 5px;
+    transform: scale(1);
+  }
 }
 
 .main {
   display: flex;
   flex-wrap: wrap;
-  margin: -12em auto 1em;
   max-width: 600px;
+  padding: 1.5em;
+  margin: -10em auto 1em;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 1em 0;
+    margin: -9em auto 1em;
+  }
 }
