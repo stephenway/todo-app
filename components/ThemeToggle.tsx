@@ -10,7 +10,13 @@ const ThemeToggle = ({ className }: ThemeToggleProps): JSX.Element => (
   <ThemeContext.Consumer>
     {({ dark, toggle }) => {
       const ThemeIcon = !dark ? Moon : Sun;
-      return <ThemeIcon onClick={toggle} className={className || ""} />;
+      return (
+        <ThemeIcon
+          onClick={toggle}
+          className={className || ""}
+          title="Change theme"
+        />
+      );
     }}
   </ThemeContext.Consumer>
 );
