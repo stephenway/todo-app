@@ -1,0 +1,16 @@
+.root {
+  background: none;
+  border: none;
+  color: var(--text-color-primary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.25s ease;
+}
+
+.root:hover:not(.active) {
+  color: var(--btn-hover);
+}
+
+.active {
+  color: var(--color-primary);
+}
