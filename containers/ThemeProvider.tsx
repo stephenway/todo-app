@@ -18,12 +18,10 @@ export function ThemeProvider({ children }) {
   };
   const [isDark, setIsDark] = useState(initialDark());
 
-  useEffect(() => applyTheme(), [isDark]);
-
-  const applyTheme = () => {
+  useEffect(() => {
     const root = document.getElementsByTagName("html")[0];
     root.className = isDark ? "darkTheme" : "";
-  };
+  }, [isDark]);
 
   const toggle = () => {
     setIsDark(!isDark);
