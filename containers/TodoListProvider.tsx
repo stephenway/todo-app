@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { TodoFilter, Todos } from "../interfaces";
 import { idSort } from "../utils/array";
 
@@ -21,12 +15,14 @@ const useStore = () => {
       ? todos.filter((t) => !t.complete)
       : todos;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const storedTodos = localStorage.getItem("todos");
-    setTodos(JSON.parse(storedTodos));
+    if (storedTodos !== null) {
+      setTodos(JSON.parse(storedTodos));
+    }
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isMounted.current) {
       localStorage.setItem("todos", JSON.stringify(todos));
     } else {

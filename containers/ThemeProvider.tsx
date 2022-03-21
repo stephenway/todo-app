@@ -1,4 +1,4 @@
-import { createContext, useLayoutEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext({
   dark: false,
@@ -18,7 +18,7 @@ export function ThemeProvider({ children }) {
   };
   const [isDark, setIsDark] = useState(initialDark());
 
-  useLayoutEffect(() => applyTheme(), [isDark]);
+  useEffect(() => applyTheme(), [isDark]);
 
   const applyTheme = () => {
     const root = document.getElementsByTagName("html")[0];
