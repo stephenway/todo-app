@@ -6,7 +6,7 @@ import TodoFilterGroup from "./TodoFilterGroup";
 
 const TodoController = () => {
   const { todos, clearCompleted } = useTodos();
-  const numActive = todos.filter((t: Todo) => !t.complete).length;
+  const numActive = todos ? todos.filter((t: Todo) => !t.complete).length : 0;
 
   const filters = [
     { label: "All", key: "all" },
