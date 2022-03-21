@@ -9,7 +9,6 @@ const IndexPage = () => {
       <Layout title="My Todos">
         <AddTodoForm />
         <TodoList />
-        <p>Drag and drop to reorder list</p>
       </Layout>
     </TodoListProvider>
   );

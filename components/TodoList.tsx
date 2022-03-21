@@ -9,14 +9,19 @@ const TodoList = (): JSX.Element => {
   const { todos } = useTodos();
 
   return (
-    <ul className={styles.root}>
-      {todos &&
-        todos.length > 0 &&
-        idSort(todos).map((todo: Todo) => (
-          <TodoItem key={todo.id} todo={todo} />
-        ))}
-      <TodoController />
-    </ul>
+    <>
+      <ul className={styles.root}>
+        {todos &&
+          todos.length > 0 &&
+          idSort(todos).map((todo: Todo) => (
+            <TodoItem key={todo.id} todo={todo} />
+          ))}
+        <TodoController />
+      </ul>
+      {todos?.length > 0 && (
+        <p className={styles.subtext}>Drag and drop to reorder list</p>
+      )}
+    </>
   );
 };
 
