@@ -1,6 +1,5 @@
 .root {
   font-size: 14px;
-  /* position: relative; */
   display: flex;
   align-items: center;
   background-color: var(--bg-card);
@@ -30,16 +29,4 @@
 .leader {
   margin-top: 1em;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .hideMobile {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .hideDesktop {
-    display: none;
-  }
 }
