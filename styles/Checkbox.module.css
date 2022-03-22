@@ -13,6 +13,7 @@
 
 .wrapper {
   margin-right: calc(1em + 2px);
+  height: 31.5px;
 }
 
 @media (min-width: 768px) {

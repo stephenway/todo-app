@@ -117,7 +117,9 @@ const TodoItem = ({ todo, index, move }: TodoItemProps): JSX.Element => {
         className={styles.checkbox}
         checked={todo.complete}
       />
-      <span className={todo.complete ? styles.textComplete : ""}>
+      <span
+        className={`${styles.text} ${todo.complete ? styles.textComplete : ""}`}
+      >
         {todo.text}
       </span>
       <Remove
