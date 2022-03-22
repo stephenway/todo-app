@@ -38,7 +38,7 @@
   width: calc(var(--form-width) - 36px);
   height: var(--form-height-mobile);
   padding: var(--form-pad);
-  color: var(--very-dark-grayish-blue);
+  color: var(--input-color);
 }
 
 @media (min-width: 768px) {

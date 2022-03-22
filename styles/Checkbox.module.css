@@ -15,17 +15,23 @@
   margin-right: calc(1em + 2px);
 }
 
-.interactive:hover {
-  border-radius: 50px;
-  width: 22px;
-  height: 22px;
-  position: relative;
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  padding: 0;
-  transition: none;
-  left: 1.5px;
-  bottom: 1px;
-  margin-right: calc(1em + 4px);
+@media (min-width: 768px) {
+  .interactive:hover {
+    border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      hsl(192, 100%, 67%),
+      hsl(280, 87%, 65%)
+    );
+    padding: 0;
+    transition: none;
+    left: 1.5px;
+    bottom: 1px;
+    margin-right: calc(1em + 4px);
+  }
 }
 
 .interactive > span {
@@ -54,6 +60,12 @@
 
 .icon {
   position: relative;
-  top: 1.5px;
+  top: 6.5px;
   left: 6.5px;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    top: 1.5px;
+  }
 }

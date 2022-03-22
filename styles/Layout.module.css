@@ -2,7 +2,8 @@
   width: 100%;
   min-height: 209px;
   background-image: var(--bg-mobile-image);
-  background-size: contain;
+  background-size: cover;
+  background-position: 50% 50%;
   margin: 0;
   color: #fff;
   padding: 1.5em;
@@ -13,8 +14,6 @@
   .header {
     height: 320px;
     background-image: var(--bg-desktop-image);
-    background-size: cover;
-    background-position: 50% 50%;
     padding: 1em;
   }
 }

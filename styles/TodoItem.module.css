@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  color: var(--input-color);
   background-color: var(--bg-card);
   width: var(--form-width);
   height: var(--form-height-mobile);
@@ -31,7 +32,7 @@
 }
 
 .textComplete {
-  color: var(--light-grayish-blue);
+  color: var(--input-complete);
   text-decoration: line-through;
 }
 
