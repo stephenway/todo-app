@@ -5,6 +5,7 @@ import { type Todos, type Todo } from "../interfaces";
 import TodoItem from "./TodoItem";
 import TodoController from "./TodoController";
 import { useCallback } from "react";
+import TodoFilterGroup from "./TodoFilterGroup";
 
 const TodoList = (): JSX.Element => {
   const { todos, setTodos } = useTodos();
