@@ -26,7 +26,8 @@ const Checkbox = ({
 
   return (
     <span
-      className={`${styles.wrapper} ${!disabled && styles.pointer} ${
+      id={id ? `todoCheck-${id}` : undefined}
+      className={`${styles.wrapper} ${!disabled ? styles.pointer : ""} ${
         !disabled && !checked ? styles.interactive : ""
       }`}
     >
