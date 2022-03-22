@@ -1,3 +1,29 @@
+# TODO App
+
+### Setup
+
+To get started, you'll want to install dependencies:
+
+```shell
+npm install
+```
+
+To run this project you'll want to run:
+
+#### Development
+
+```shell
+yarn dev
+```
+
+#### Production
+
+```shell
+yarn build && yarn start
+```
+
+In both modes you will be prompted to visit the app in the specified localhost port.
+
 ### Objective
 
 Your challenge is to build out this todo app and get it looking as close to the design as possible.
@@ -8,29 +34,29 @@ Using TypeScript and React, your task is to build out the project to the designs
 
 Your users should be able to:
 
--   View the optimal layout for the app depending on their device's screen size
--   See hover states for all interactive elements on the page
--   Add new todos to the list
--   Mark todos as complete
--   Delete todos from the list
--   Filter by all/active/complete todos
--   Clear all completed todos
--   Toggle light and dark mode
--   **Bonus**: Drag and drop to reorder items on the list
+- [x] View the optimal layout for the app depending on their device's screen size
+- [x] See hover states for all interactive elements on the page
+- [x] Add new todos to the list
+- [x] Mark todos as complete
+- [x] Delete todos from the list
+- [x] Filter by all/active/complete todos
+- [x] Clear all completed todos
+- [x] Toggle light and dark mode
+- [x] **Bonus**: Drag and drop to reorder items on the list
 
 ### Evaluation Criteria
 
--   **TypeScript** best practices
--   Show us your work through your commit history
--   We're looking for you to produce working code, with enough room to demonstrate how to structure components in a small program
--   Completeness: did you complete the features?
--   Correctness: does the functionality act in sensible, thought-out ways?
--   Maintainability: is it written in a clean, maintainable way?
--   Testing: is the system adequately tested?
+- **TypeScript** best practices
+- Show us your work through your commit history
+- We're looking for you to produce working code, with enough room to demonstrate how to structure components in a small program
+- Completeness: did you complete the features?
+- Correctness: does the functionality act in sensible, thought-out ways?
+- Maintainability: is it written in a clean, maintainable way?
+- Testing: is the system adequately tested?
 
 ### Deliverables
 
-Make sure to include all source code in the repository. 
+Make sure to include all source code in the repository.
 
 ### CodeSubmit
 
