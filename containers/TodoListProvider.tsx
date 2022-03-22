@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { TodoFilter, Todos } from "../interfaces";
-import { idSort } from "../utils/array";
 
 const TodoListContext = createContext(null);
 
@@ -24,6 +23,7 @@ const useStore = () => {
 
   useEffect(() => {
     if (isMounted.current) {
+      console.log("update localStorage");
       localStorage.setItem("todos", JSON.stringify(todos));
     } else {
       isMounted.current = true;
@@ -32,22 +32,23 @@ const useStore = () => {
 
   return {
     todos: todoList,
-    addTodo: (t) =>
+    setTodos,
+    addTodo: (t: string) =>
       t !== "" &&
       setTodos([
         ...todos,
         {
-          id: todos.length + 1,
+          id: (todos.length > 0 ? todos.slice(-1)[0].id : 0) + 1,
           text: t.trim(),
           complete: false,
         },
       ]),
     removeTodo: (id: number) => setTodos(todos.filter((t) => t.id !== id)),
     completeTodo: (id: number) => {
-      const completeTodo = todos.filter((t) => t.id === id)[0];
+      const newTodos = todos;
+      const completeTodo = newTodos.find((t) => t.id === id);
       completeTodo.complete = !completeTodo.complete;
-      const otherTodos = todos.filter((t) => t.id !== id);
-      setTodos(idSort([...otherTodos, completeTodo]));
+      setTodos(() => [...newTodos]);
     },
     clearCompleted: () => {
       const activeTodos = todos.filter((t) => !t.complete);
