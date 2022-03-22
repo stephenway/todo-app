@@ -123,6 +123,7 @@ const TodoItem = ({ todo, index, move }: TodoItemProps): JSX.Element => {
         {todo.text}
       </span>
       <Remove
+        id={`removeTodo-${todo.id}`}
         onClick={() => removeTodo(todo.id)}
         className={`${styles.removeButton} ${styles.alignRight}`}
       />

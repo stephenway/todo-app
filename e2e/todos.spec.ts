@@ -47,6 +47,14 @@ test("should match provided mockup", async ({ page }) => {
     path: "public/test/screenshot-1.png",
     fullPage: true,
   });
+  await page.locator("#todoCheck-2").first().hover();
+  await page.locator('li[data-handler-id="T2"]').screenshot({
+    path: "public/test/hoverCheckbox.png",
+  });
+  await page.locator("#removeTodo-2").first().hover();
+  await page.locator('li[data-handler-id="T2"]').screenshot({
+    path: "public/test/hoverRemoveButton.png",
+  });
 });
 
 test("should filter by active todos", async ({ page }) => {
@@ -116,7 +124,13 @@ test("should remove the first todo item", async ({ page }) => {
   await page.goto("/");
   // Create a todo item
   await todoInput(page).click();
+  await page.locator("#addTodoForm").screenshot({
+    path: "public/test/addTodoInput.png",
+  });
   await todoInput(page).fill(todoItems[firstItem]);
+  await page.locator("#addTodoForm").screenshot({
+    path: "public/test/addTodoInput-filled.png",
+  });
   await todoInput(page).press("Enter");
   expect(page.isVisible(`text=${todoItems[firstItem]}`)).toBeTruthy();
   // Remove the first todo

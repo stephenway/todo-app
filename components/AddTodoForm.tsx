@@ -18,7 +18,7 @@ const AddTodoForm = () => {
   };
 
   return (
-    <div className={styles.root}>
+    <div id="addTodoForm" className={styles.root}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <Checkbox className={styles.checkbox} disabled />
         <input

@@ -1,5 +1,7 @@
 # TODO App
 
+Simple todo app with frontend features based on `localStorage` data. To learn more about this project follow the brief section below for context.
+
 ### Setup
 
 To get started, you'll want to install dependencies:
@@ -23,6 +25,22 @@ yarn build && yarn start
 ```
 
 In both modes you will be prompted to visit the app in the specified localhost port.
+
+#### Testing
+
+This handles e2e testing of the application. I didn't feel there were enough complex components to unit test for this project so I stuck with e2e testing functionality for desktop and mobile browsers. You'll also notice I've put in some screenshots to show off what the application looks like in comparison to the original mockups.
+
+```shell
+# Before your first run install playwright
+npx playwright install
+
+# To run the test suite
+yarn test
+```
+
+#### Screenshots
+
+![1](public/test/screenshot-1.png)
 
 ### Objective
 
