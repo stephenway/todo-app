@@ -23,7 +23,6 @@ const useStore = () => {
 
   useEffect(() => {
     if (isMounted.current) {
-      console.log("update localStorage");
       localStorage.setItem("todos", JSON.stringify(todos));
     } else {
       isMounted.current = true;
