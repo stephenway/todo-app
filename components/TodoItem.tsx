@@ -28,8 +28,7 @@ const style = {
 };
 
 const TodoItem = ({ todo, index, move }: TodoItemProps): JSX.Element => {
-  // const ref = useRef<HTMLLIElement>(null);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLLIElement>(null);
   const { removeTodo } = useTodos();
 
   const [{ handlerId }, drop] = useDrop<
@@ -107,7 +106,7 @@ const TodoItem = ({ todo, index, move }: TodoItemProps): JSX.Element => {
   drag(drop(ref));
 
   return (
-    <div
+    <li
       ref={ref}
       className={styles.item}
       style={{ opacity }}
@@ -125,7 +124,7 @@ const TodoItem = ({ todo, index, move }: TodoItemProps): JSX.Element => {
         onClick={() => removeTodo(todo.id)}
         className={`${styles.removeButton} ${styles.alignRight}`}
       />
-    </div>
+    </li>
   );
 };
 
