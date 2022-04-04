@@ -7,7 +7,7 @@ Simple todo app with frontend features based on `localStorage` data. To learn mo
 To get started, you'll want to install dependencies:
 
 ```shell
-npm install
+yarn
 ```
 
 To run this project you'll want to run:
